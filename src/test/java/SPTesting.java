@@ -1,6 +1,8 @@
 
 
 
+import io.netty.util.internal.StringUtil;
+import org.apache.commons.lang3.StringUtils;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -15,6 +17,9 @@ public class SPTesting {
     Statement stmt=null;
 
     ResultSet rs;
+    CallableStatement cStmt;
+    ResultSet rs1;
+    ResultSet rs2;
 
     @BeforeClass
     void setup() throws SQLException {
@@ -35,5 +40,30 @@ public class SPTesting {
 
         Assert.assertEquals(rs.getString("Name"),"SelectAllCustomers");
     }
+
+
+    @Test(priority =2)
+    void test_SelectAllCustormers() throws SQLException {
+        cStmt = con.prepareCall("{CALL SelectAllCustomers()}");
+        cStmt.executeQuery(); // resultset1
+
+        Statement stmt= con.createStatement();
+        rs2 = stmt.executeQuery("select * from custormers");
+
+        Assert.assertEquals(compareResultSets(rs1,rs2),true);
+    }
+    public boolean compareResultSets(ResultSet resultSet1, ResultSet resultSet2) throws SQLException {
+        while (resultSet1.next()) {
+
+            resultSet2.next();
+            int count = resultSet1.getMetaData().getColumnCount();
+            for (int i = 1; i <= count; i++) {
+                if (!StringUtils.equals(resultSet1.getString(i), resultSet2.getString(i))) {
+                    return false;
+                }
+            }
+        }
+        return true;
+        }
 
 }
