@@ -13,8 +13,8 @@ import java.sql.*;
 
 public class SPTesting {
 
-    Connection con=null;
-    Statement stmt=null;
+    Connection con = null;
+    Statement stmt = null;
 
     ResultSet rs;
     CallableStatement cStmt;
@@ -23,7 +23,7 @@ public class SPTesting {
 
     @BeforeClass
     void setup() throws SQLException {
-        con= DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels","root","********");
+        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels", "root", "dota483361483");
     }
 
     @AfterClass
@@ -31,27 +31,27 @@ public class SPTesting {
         con.close();
     }
 
-    @Test(priority=1)
-    void test_storedProceduresExists() throws SQLException
-    {
-        stmt=con.createStatement();
-        rs=stmt.executeQuery("SHOW PROCEDURE STATUS WHERE Name='SelectAllCustomers'");
+    @Test(priority = 1)
+    void test_storedProceduresExists() throws SQLException {
+        stmt = con.createStatement();
+        rs = stmt.executeQuery("SHOW PROCEDURE STATUS WHERE Name='SelectAllCustomers'");
         rs.next();
 
-        Assert.assertEquals(rs.getString("Name"),"SelectAllCustomers");
+        Assert.assertEquals(rs.getString("Name"), "SelectAllCustomers");
     }
 
 
-    @Test(priority =2)
-    void test_SelectAllCustormers() throws SQLException {
+    @Test(priority = 2)
+    void test_SelectAllCustomers() throws SQLException {
         cStmt = con.prepareCall("{CALL SelectAllCustomers()}");
-        cStmt.executeQuery(); // resultset1
+        rs1 = cStmt.executeQuery(); // resultset1
 
-        Statement stmt= con.createStatement();
-        rs2 = stmt.executeQuery("select * from custormers");
+        Statement stmt = con.createStatement();
+        rs2 = stmt.executeQuery("select * from customers");
 
-        Assert.assertEquals(compareResultSets(rs1,rs2),true);
+        Assert.assertEquals(compareResultSets(rs1, rs2), true);
     }
+
     public boolean compareResultSets(ResultSet resultSet1, ResultSet resultSet2) throws SQLException {
         while (resultSet1.next()) {
 
@@ -64,6 +64,7 @@ public class SPTesting {
             }
         }
         return true;
-        }
 
+    }
 }
+
