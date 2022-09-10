@@ -37,12 +37,13 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.SPTesting.test_SelectAllCustomers">
-    <configuration name="SPTesting" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.SPTesting.test_GetCustomerShipping">
+    <configuration name="SPTesting.test_GetCustomerShipping" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DataBaseTestingggggg" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="SPTesting" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="METHOD_NAME" value="test_GetCustomerShipping" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -61,11 +62,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SPTesting.test_SelectAllCustormers" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SPTesting.test_SelectAllCustomersByCity" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DataBaseTestingggggg" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="SPTesting" />
-      <option name="METHOD_NAME" value="test_SelectAllCustormers" />
+      <option name="METHOD_NAME" value="test_SelectAllCustomersByCity" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -73,11 +74,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SPTesting.test_storedProceduresExists" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SPTesting.test_SelectAllCustomersByCityAndPinCode" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DataBaseTestingggggg" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="SPTesting" />
-      <option name="METHOD_NAME" value="test_storedProceduresExists" />
+      <option name="METHOD_NAME" value="test_SelectAllCustomersByCityAndPinCode" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SPTesting.test_get_order_by_cust" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DataBaseTestingggggg" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SPTesting" />
+      <option name="METHOD_NAME" value="test_get_order_by_cust" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -87,10 +100,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.SPTesting.test_GetCustomerShipping" />
+        <item itemvalue="TestNG.SPTesting.test_get_order_by_cust" />
+        <item itemvalue="TestNG.SPTesting.test_SelectAllCustomersByCityAndPinCode" />
+        <item itemvalue="TestNG.SPTesting.test_SelectAllCustomersByCity" />
         <item itemvalue="TestNG.SPTesting.test_SelectAllCustomers" />
-        <item itemvalue="TestNG.SPTesting.test_SelectAllCustormers" />
-        <item itemvalue="TestNG.SPTesting.test_storedProceduresExists" />
-        <item itemvalue="TestNG.SPTesting" />
       </list>
     </recent_temporary>
   </component>
