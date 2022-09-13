@@ -31,6 +31,7 @@ public class SPTesting {
         con.close();
     }
 
+
     @Test(priority = 1)
     void test_storedProceduresExists() throws SQLException {
         stmt = con.createStatement();
