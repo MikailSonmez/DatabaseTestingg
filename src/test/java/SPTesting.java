@@ -39,6 +39,7 @@ public class SPTesting {
         rs.next();
 
         Assert.assertEquals(rs.getString("Name"), "SelectAllCustomers");
+
     }
 
 
