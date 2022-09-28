@@ -29,6 +29,7 @@ public class SPTesting {
     @AfterClass
     void tearDown() throws SQLException {
         con.close();
+
     }
 
 
@@ -155,7 +156,6 @@ public class SPTesting {
         return true;
 
     }
-    
 
 }
 
