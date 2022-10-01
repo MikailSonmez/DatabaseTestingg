@@ -24,6 +24,7 @@ public class SPTesting {
     @BeforeClass
     void setup() throws SQLException {
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels", "root", "********");
+
     }
 
     @AfterClass
