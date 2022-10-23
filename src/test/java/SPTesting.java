@@ -55,6 +55,7 @@ public class SPTesting {
         rs2 = stmt.executeQuery("select * from customers");
 
         Assert.assertEquals(compareResultSets(rs1, rs2), true);
+
     }
 
     @Test(priority = 3)
