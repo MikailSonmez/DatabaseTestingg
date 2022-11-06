@@ -38,6 +38,7 @@ public class SPTesting {
 
     @Test(priority = 1)
     void test_storedProceduresExists() throws SQLException {
+
         stmt = con.createStatement();
         rs = stmt.executeQuery("SHOW PROCEDURE STATUS WHERE Name='SelectAllCustomers'");
         rs.next();
