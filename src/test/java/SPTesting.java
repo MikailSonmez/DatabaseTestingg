@@ -50,6 +50,7 @@ public class SPTesting {
 
     @Test(priority = 2)
     void test_SelectAllCustomers() throws SQLException {
+
         cStmt = con.prepareCall("{CALL SelectAllCustomers()}");
         rs1 = cStmt.executeQuery(); // resultset1
 
