@@ -131,6 +131,7 @@ public class SPTesting {
 
         cStmt = con.prepareCall("{call GetCustomerShipping(?,?)}");
         cStmt.setInt(1,112);
+
         cStmt.registerOutParameter(2, Types.VARCHAR);
 
         cStmt.executeQuery();
