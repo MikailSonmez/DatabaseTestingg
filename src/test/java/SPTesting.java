@@ -157,6 +157,7 @@ public class SPTesting {
             for (int i = 1; i <= count; i++) {
                 if (!StringUtils.equals(resultSet1.getString(i), resultSet2.getString(i))) {
                     return false;
+
                 }
             }
 
