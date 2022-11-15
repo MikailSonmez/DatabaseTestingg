@@ -121,6 +121,7 @@ public class SPTesting {
         int exp_disputed = rs.getInt("disputed");
 
         if(shipped==exp_shipped && canceled==exp_canceled && resolved==exp_resolved && disputed== exp_disputed)
+
             Assert.assertTrue(true);
         else
             Assert.assertTrue(false);
