@@ -111,6 +111,7 @@ public class SPTesting {
         // System.out.println(shipped+" "+canceled+" "+resolved+" "+disputed);
 
         Statement stmt=con.createStatement();
+
         rs = stmt.executeQuery("select (SELECT count(*) as 'shipped' FROM orders WHERE customerNumber = 141 AND status = 'Shipped') as Shipped,(SELECT count(*) as 'canceled'FROM orders WHERE customerNumber = 141 AND status = 'Canceled') as Canceled,(SELECT count(*) as 'resolved'FROM orders WHERE customerNumber = 141 AND status = 'Resolved') as Resolved,(SELECT count(*) as 'disputed'FROM orders WHERE customerNumber = 141 AND status = 'Disputed') as Disputed");
 
         rs.next();
