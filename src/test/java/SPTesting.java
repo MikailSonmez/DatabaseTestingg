@@ -86,6 +86,7 @@ public class SPTesting {
         rs2 = stmt.executeQuery("SELECT * FROM Customers WHERE city = 'Singapore' and postalCode='07993'");
 
         Assert.assertEquals(compareResultSets(rs1,rs2),true);
+
     }
 
     @Test(priority = 5)
